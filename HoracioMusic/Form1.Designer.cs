@@ -30,7 +30,6 @@ namespace HoracioMusic
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.painelLogo = new System.Windows.Forms.Panel();
             this.btnMídias = new System.Windows.Forms.Button();
             this.painelMídiaSubmenu = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -45,11 +44,10 @@ namespace HoracioMusic
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.btnFerramentas = new System.Windows.Forms.Button();
-            this.btnEqualizer = new System.Windows.Forms.Button();
+            this.btnPlayList = new System.Windows.Forms.Button();
             this.painelPlayer = new System.Windows.Forms.Panel();
             this.painelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPlayList = new System.Windows.Forms.Button();
             this.painelMídiaSubmenu.SuspendLayout();
             this.painelGrandeMenu.SuspendLayout();
             this.painelFerramentasSubmenu.SuspendLayout();
@@ -57,25 +55,16 @@ namespace HoracioMusic
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // painelLogo
-            // 
-            this.painelLogo.AutoScroll = true;
-            this.painelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelLogo.Location = new System.Drawing.Point(0, 0);
-            this.painelLogo.Name = "painelLogo";
-            this.painelLogo.Size = new System.Drawing.Size(200, 79);
-            this.painelLogo.TabIndex = 1;
-            // 
             // btnMídias
             // 
             this.btnMídias.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMídias.FlatAppearance.BorderSize = 0;
             this.btnMídias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMídias.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnMídias.Location = new System.Drawing.Point(0, 79);
+            this.btnMídias.Location = new System.Drawing.Point(0, 0);
             this.btnMídias.Name = "btnMídias";
             this.btnMídias.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMídias.Size = new System.Drawing.Size(200, 40);
+            this.btnMídias.Size = new System.Drawing.Size(200, 53);
             this.btnMídias.TabIndex = 2;
             this.btnMídias.Text = "Mídias";
             this.btnMídias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -90,7 +79,7 @@ namespace HoracioMusic
             this.painelMídiaSubmenu.Controls.Add(this.button3);
             this.painelMídiaSubmenu.Controls.Add(this.button2);
             this.painelMídiaSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelMídiaSubmenu.Location = new System.Drawing.Point(0, 119);
+            this.painelMídiaSubmenu.Location = new System.Drawing.Point(0, 53);
             this.painelMídiaSubmenu.Name = "painelMídiaSubmenu";
             this.painelMídiaSubmenu.Size = new System.Drawing.Size(200, 124);
             this.painelMídiaSubmenu.TabIndex = 3;
@@ -172,11 +161,9 @@ namespace HoracioMusic
             this.painelGrandeMenu.Controls.Add(this.btnAjuda);
             this.painelGrandeMenu.Controls.Add(this.painelFerramentasSubmenu);
             this.painelGrandeMenu.Controls.Add(this.btnFerramentas);
-            this.painelGrandeMenu.Controls.Add(this.btnEqualizer);
             this.painelGrandeMenu.Controls.Add(this.btnPlayList);
             this.painelGrandeMenu.Controls.Add(this.painelMídiaSubmenu);
             this.painelGrandeMenu.Controls.Add(this.btnMídias);
-            this.painelGrandeMenu.Controls.Add(this.painelLogo);
             this.painelGrandeMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.painelGrandeMenu.Location = new System.Drawing.Point(0, 0);
             this.painelGrandeMenu.Name = "painelGrandeMenu";
@@ -189,7 +176,7 @@ namespace HoracioMusic
             this.btnAjuda.FlatAppearance.BorderSize = 0;
             this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjuda.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnAjuda.Location = new System.Drawing.Point(0, 487);
+            this.btnAjuda.Location = new System.Drawing.Point(0, 382);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAjuda.Size = new System.Drawing.Size(200, 40);
@@ -207,7 +194,7 @@ namespace HoracioMusic
             this.painelFerramentasSubmenu.Controls.Add(this.button15);
             this.painelFerramentasSubmenu.Controls.Add(this.button16);
             this.painelFerramentasSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelFerramentasSubmenu.Location = new System.Drawing.Point(0, 363);
+            this.painelFerramentasSubmenu.Location = new System.Drawing.Point(0, 258);
             this.painelFerramentasSubmenu.Name = "painelFerramentasSubmenu";
             this.painelFerramentasSubmenu.Size = new System.Drawing.Size(200, 124);
             this.painelFerramentasSubmenu.TabIndex = 8;
@@ -286,7 +273,7 @@ namespace HoracioMusic
             this.btnFerramentas.FlatAppearance.BorderSize = 0;
             this.btnFerramentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFerramentas.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnFerramentas.Location = new System.Drawing.Point(0, 323);
+            this.btnFerramentas.Location = new System.Drawing.Point(0, 218);
             this.btnFerramentas.Name = "btnFerramentas";
             this.btnFerramentas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnFerramentas.Size = new System.Drawing.Size(200, 40);
@@ -296,21 +283,21 @@ namespace HoracioMusic
             this.btnFerramentas.UseVisualStyleBackColor = true;
             this.btnFerramentas.Click += new System.EventHandler(this.btnFerramentas_Click);
             // 
-            // btnEqualizer
+            // btnPlayList
             // 
-            this.btnEqualizer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEqualizer.FlatAppearance.BorderSize = 0;
-            this.btnEqualizer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEqualizer.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnEqualizer.Location = new System.Drawing.Point(0, 283);
-            this.btnEqualizer.Name = "btnEqualizer";
-            this.btnEqualizer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEqualizer.Size = new System.Drawing.Size(200, 40);
-            this.btnEqualizer.TabIndex = 6;
-            this.btnEqualizer.Text = "Equalizador";
-            this.btnEqualizer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEqualizer.UseVisualStyleBackColor = true;
-            this.btnEqualizer.Click += new System.EventHandler(this.btnEqualizer_Click);
+            this.btnPlayList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPlayList.FlatAppearance.BorderSize = 0;
+            this.btnPlayList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlayList.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnPlayList.Location = new System.Drawing.Point(0, 177);
+            this.btnPlayList.Name = "btnPlayList";
+            this.btnPlayList.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPlayList.Size = new System.Drawing.Size(200, 41);
+            this.btnPlayList.TabIndex = 4;
+            this.btnPlayList.Text = "Pesquisar";
+            this.btnPlayList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlayList.UseVisualStyleBackColor = true;
+            this.btnPlayList.Click += new System.EventHandler(this.btnPlayList_Click);
             // 
             // painelPlayer
             // 
@@ -341,22 +328,6 @@ namespace HoracioMusic
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnPlayList
-            // 
-            this.btnPlayList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPlayList.FlatAppearance.BorderSize = 0;
-            this.btnPlayList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlayList.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnPlayList.Location = new System.Drawing.Point(0, 243);
-            this.btnPlayList.Name = "btnPlayList";
-            this.btnPlayList.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPlayList.Size = new System.Drawing.Size(200, 40);
-            this.btnPlayList.TabIndex = 4;
-            this.btnPlayList.Text = "Pesquisar";
-            this.btnPlayList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlayList.UseVisualStyleBackColor = true;
-            this.btnPlayList.Click += new System.EventHandler(this.btnPlayList_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,8 +350,6 @@ namespace HoracioMusic
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel painelLogo;
         private System.Windows.Forms.Button btnMídias;
         private System.Windows.Forms.Panel painelMídiaSubmenu;
         private System.Windows.Forms.Button button5;
@@ -395,7 +364,6 @@ namespace HoracioMusic
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button btnFerramentas;
-        private System.Windows.Forms.Button btnEqualizer;
         private System.Windows.Forms.Panel painelPlayer;
         private System.Windows.Forms.Panel painelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;

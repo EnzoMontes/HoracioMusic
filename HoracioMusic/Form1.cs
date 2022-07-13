@@ -103,7 +103,7 @@ namespace HoracioMusic
         private void btnPlayList_Click(object sender, EventArgs e)
         {
 
-
+            abrirChildForm(new Form3());
 
         }// fim botao Pesquisar
 
@@ -138,7 +138,7 @@ namespace HoracioMusic
         private void btnEqualizer_Click(object sender, EventArgs e)
         {
 
-            abrirChildForm(new Form3());
+            abrirChildForm(new Form4());
 
             ocultarSubMenu();
 
@@ -208,6 +208,11 @@ namespace HoracioMusic
         }
 
         private void painelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void painelLogo_Paint(object sender, PaintEventArgs e)
         {
 
         }

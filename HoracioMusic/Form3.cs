@@ -28,6 +28,36 @@ namespace HoracioMusic
         {
 
         }
+
+        private void Todas_Mídias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        WMPLib.IWMPPlaylist playList;
+
+        private void btnAbrir_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.Title = "Abrir Mídia";
+            ofd.Filter = "Arquivo mp4|*.mp4|Arquivo mp3|*.mp3";
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+
+                
+
+            }
+
+        }// Fim botao abrir
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+
+
+        }
     }// fim class
 
 }// fim projeto

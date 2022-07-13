@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+using MySql.Data;
 
 namespace HoracioMusic
 {
@@ -27,26 +28,37 @@ namespace HoracioMusic
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=bell\sqlexpress;Initial Catalog=Registro; Integrated Security=True";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            con.Open();
-            string login = "select*from user_tb where usuário='" + textBox1.Text + "','" + textBox2.Text + "'";
-            cmd = new SqlCommand(login, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if(dr.Read()==true)
+            try
             {
-                new Form1().Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou senha inválida","Mensagem",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }
+                string conexao = "server=localhost;DataBase=Bdlogin;Uid=root;password=";
+                var connection = new MySqlConnection(conexao);
+                var comand = connection.CreateCommand();
 
 
+                MySqlCommand query = new MySqlCommand("select * from Cadastro where usuario ='" + textBox1.Text + "' and senha ='" + textBox2.Text + "'", connection);
+
+                connection.Open();
+                DataTable dataTable = new DataTable();
+                MySqlDataAdapter da = new MySqlDataAdapter(query);
+                da.Fill(dataTable);
+
+                foreach (DataRow list in dataTable.Rows)
+                {
+                    if (Convert.ToInt32(list.ItemArray[0]) > 0)
+                    {
+                        Form1 Cadastro1 = new Form1();
+                        Cadastro1.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Senha Inválida");
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("erro" + erro);
+            }
 
         }
 
@@ -68,7 +80,7 @@ namespace HoracioMusic
             }
             else
             {
-                textBox2.PasswordChar = '=';
+                textBox2.PasswordChar = '*';
             }
         }
     }
